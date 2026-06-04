@@ -39,19 +39,37 @@
     <a href="index.html" class="back">← Back to Lockout</a>
 
     <h1>Privacy Policy for Lockout</h1>
-    <p class="updated"><strong>Last Updated: May 20, 2026</strong></p>
+    <p class="updated"><strong>Last Updated: March 14, 2026</strong></p>
 
-    <p>Lockout is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our mobile application.</p>
+    <p>Lockout is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our mobile application, including the optional Community features.</p>
 
     <h2>1. Data We Collect and How We Use It</h2>
-    <p>Lockout is designed as a "local-first" app. Your data stays on your device.</p>
+    <p>Lockout's training journal is designed as a "local-first" app. Your private training data stays on your device. When you choose to use the Community features, certain data is stored in Apple's iCloud (CloudKit) — see Section 2.</p>
     <ul>
-        <li><strong>Fitness &amp; Health Data:</strong> We store your workout logs, exercise sets, weights, body measurements, and progress photos. This data is used solely to provide you with tracking and analytics features within the App. It is stored on your device only — we have no servers and no copy of your data.</li>
+        <li><strong>Fitness &amp; Health Data:</strong> We store your workout logs, exercise sets, weights, body measurements, and progress photos. This data is used solely to provide you with tracking and analytics features within the App. It is stored on your device only — we have no private servers and no copy of your data, unless you explicitly choose to share a workout to the Community feed.</li>
         <li><strong>Apple Health (HealthKit) Data:</strong> If you grant permission, Lockout reads data from Apple's HealthKit database (specifically heart rate, active energy/calories, resting heart rate, and heart rate variability) to calculate and display workout performance, heart rate zones, and recovery metrics. We also write your completed workout duration and logged body weight entries back to HealthKit if you choose. All HealthKit data remains entirely on your device and is never sent to external servers, shared with advertisers, or used for profiling.</li>
         <li><strong>Purchase Information:</strong> We use <strong>Apple's StoreKit</strong> to manage subscriptions and tips. When you make a purchase, Apple verifies the transaction and shares your subscription status with us so we can unlock Pro features. We never see your name, payment card details, or billing information.</li>
     </ul>
 
-    <h2>2. Advertising (AdMob)</h2>
+    <h2>2. Community Features (CloudKit)</h2>
+    <p>The Community tab is <strong>entirely optional</strong>. You only enter the Community by creating a community profile (username, display name, optional bio, optional bodyweight, optional avatar). If you never create a profile, none of the data described in this section is collected.</p>
+    <p>When you do opt in, Community data is stored in <strong>Apple's CloudKit public database</strong> — Apple's iCloud infrastructure, accessed through your Apple ID. We do not operate any private servers; we do not see, copy, or process this data outside of what Apple's CloudKit APIs return to your device when other community members request it.</p>
+    <ul>
+        <li><strong>Profile data:</strong> Your chosen username, display name, bio, avatar selection, and bodyweight (if you set it). This is visible to other Lockout users.</li>
+        <li><strong>Shared workouts &amp; posts:</strong> Any workout, text note, poll, or weekly recap you explicitly share. Includes the workout title, caption, exercise list, top weights, and duration. Visible to your followers (or to anyone if your profile is open).</li>
+        <li><strong>Photos:</strong> Photos you attach to posts or use as your avatar are stored as CloudKit assets. Photos are compressed (max 1080px, ~250 KB) before upload.</li>
+        <li><strong>Social interactions:</strong> Likes, comments, comment likes, replies, follows, follow requests, poll votes, post ratings, "trained with" tags, and saved posts.</li>
+        <li><strong>Direct Messages:</strong> 1:1 messages you send to another lifter are stored in CloudKit and visible to you and the recipient. We do not have access to read your message contents.</li>
+        <li><strong>Push notification subscriptions:</strong> If you allow notifications, CloudKit may send you pushes for likes, comments, follow requests, ratings, and new messages. You can disable per-type pushes in the Community → Notification Settings sheet, or globally in iOS Settings.</li>
+        <li><strong>Reports:</strong> If you report a post or comment, the report (target ID, reason, and your CloudKit user ID) is stored so the Lockout team can review it. Reports are used solely for moderation under Apple's user-generated content requirements.</li>
+        <li><strong>Blocked / muted users:</strong> Your block and mute lists are stored locally on your device and apply to the Community feed across all your devices signed into the same iCloud account.</li>
+    </ul>
+    <p>You can stop using the Community at any time. Deleting your community profile from CloudKit will remove your profile record, though previously sent messages may remain visible to recipients (the same way deleting an iMessage account works).</p>
+
+    <h2>3. iCloud Drive Backup</h2>
+    <p>If you enable <strong>iCloud Drive auto-backup</strong> (Pro feature), a snapshot of your local training data is written to your own iCloud Drive folder after each completed workout. This backup lives in your personal iCloud — we never access it. You can delete it at any time from the Files app.</p>
+
+    <h2>4. Advertising (AdMob)</h2>
     <p>Lockout shows banner advertisements to users on the free tier using <strong>Google AdMob</strong>.</p>
     <ul>
         <li>To show ads, Google may collect and use device identifiers (such as the IDFA) to personalize your ad experience.</li>
@@ -59,24 +77,32 @@
         <li>If you upgrade to <strong>Lockout Pro</strong>, all advertising and tracking related to AdMob are disabled.</li>
     </ul>
 
-    <h2>3. Data Storage and Security</h2>
+    <h2>5. Data Storage and Security</h2>
     <ul>
-        <li><strong>On-Device:</strong> Your workout data is stored locally in a secure database on your iPhone. We have no servers that receive or store any of it.</li>
-        <li><strong>No Third-Party Sales:</strong> We <strong>never</strong> sell your fitness data, personal information, or workout history to third parties.</li>
-        <li><strong>No Analytics Tracking:</strong> We do not use third-party analytics (like Google Analytics or Firebase) to track your behavior inside the App.</li>
+        <li><strong>On-Device:</strong> Your private training data is stored locally in a secure database on your iPhone. We have no servers that receive or store it.</li>
+        <li><strong>CloudKit (Community only):</strong> Community data lives in Apple's iCloud, accessed via your Apple ID. Apple's privacy and security practices govern that storage.</li>
+        <li><strong>No Third-Party Sales:</strong> We <strong>never</strong> sell your fitness data, community posts, messages, photos, or any personal information to third parties.</li>
+        <li><strong>No Analytics Tracking:</strong> We do not use third-party analytics (like Google Analytics, Firebase, Mixpanel, etc.) to track your behavior inside the App.</li>
+        <li><strong>End-to-end:</strong> Apple's CloudKit transport is encrypted in transit. Direct Messages are stored in Apple's iCloud public database scoped to the participant pair — Apple may technically access this storage, but we do not.</li>
     </ul>
 
-    <h2>4. Your Rights and Control</h2>
+    <h2>6. Your Rights and Control</h2>
     <ul>
-        <li><strong>Data Export:</strong> You can export all your data as JSON or CSV at any time from the in-app Backup screen.</li>
-        <li><strong>Data Deletion:</strong> You can delete all your data at any time by deleting the App from your device.</li>
-        <li><strong>Permissions:</strong> You can revoke permissions for Notifications, Photo Library (for progress photos), or Tracking at any time via the iOS Settings app.</li>
+        <li><strong>Data Export:</strong> You can export all your local training data as JSON or CSV at any time from the in-app Backup screen.</li>
+        <li><strong>Data Deletion (Local):</strong> Delete the App from your device to remove all local training data.</li>
+        <li><strong>Data Deletion (Community):</strong> Use the in-app delete actions to remove individual posts, comments, or your entire community profile. Removing your community profile clears your username, bio, bodyweight, and avatar from CloudKit.</li>
+        <li><strong>Block &amp; Mute:</strong> Manage your block list from Community → your profile menu → Blocked Users, or from Settings. Blocking is local; the blocked user is not notified.</li>
+        <li><strong>Notification Preferences:</strong> Toggle pushes per type (likes, comments, follows, requests, ratings, PRs) in Community → Notification Settings.</li>
+        <li><strong>Permissions:</strong> Revoke permissions for Notifications, Photo Library, Tracking, or HealthKit at any time via the iOS Settings app.</li>
     </ul>
 
-    <h2>5. Changes to This Policy</h2>
+    <h2>7. Children's Privacy</h2>
+    <p>Lockout is not directed at children under 13. The Community features require an Apple ID, and Apple's policies require users to be at least 13 (or the equivalent minimum age in their country) to hold one.</p>
+
+    <h2>8. Changes to This Policy</h2>
     <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
 
-    <h2>6. Contact Us</h2>
+    <h2>9. Contact Us</h2>
     <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:gymbuddy.lockout@gmail.com"><strong>gymbuddy.lockout@gmail.com</strong></a></p>
 </body>
 </html>
